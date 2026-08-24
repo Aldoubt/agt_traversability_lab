@@ -9,9 +9,9 @@ def generate_launch_description():
             executable='cloud_republisher',
             name='cloud_republisher',
             output='screen',
-            parameters=[{
-                'input_topic': '/livox/lidar',
-                'output_topic': '/agt/cloud/visualization'
-            }]
-        )
+            remappings=[
+                ('input_cloud', '/livox/lidar'),
+                ('output_cloud', '/agt/cloud/visualization'),
+            ],
+        ),
     ])
