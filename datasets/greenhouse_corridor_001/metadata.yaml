@@ -1,0 +1,18 @@
+dataset:
+  name: greenhouse_corridor_001
+  description: >
+    Greenhouse corridor containing empty ridges and vegetation-covered
+    ridges with changing corridor width.
+
+sensor:
+  lidar:
+    model: Livox MID360
+    topic: /livox/lidar
+
+robot:
+  model: mk-mini
+
+purpose:
+  - point cloud visualization
+  - ground segmentation
+  - traversability evaluation
