@@ -1,23 +1,47 @@
-# EXP001 Cloud Visualization
+# EXP001 - MID360 cloud visualization baseline
 
-## Goal
+## Objective
 
-Validate the MID360 ROS2 data pipeline.
+Validate the complete pipeline:
+
+```
+Livox MID360 rosbag2
+        |
+        v
+ROS2 PointCloud2
+        |
+        v
+agt_cloud_visualizer
+        |
+        v
+RViz2
+```
 
 ## Input
 
-- MID360 ROS2 rosbag2
+- Livox MID360 ROS2 rosbag2
+- `/livox/lidar` PointCloud2 topic
 
 ## Output
 
-- ROS2 PointCloud2 topic
-- RViz2 visualization
+- `/agt/cloud/visualization` topic
+- RViz2 visualization configuration
 
-## Validation
+## Validation items
 
-- Correct frame transform
-- Correct point cloud direction
-- Correct timestamp behavior
+- Point cloud topic correctness
+- Frame transformation
+- Timestamp consistency
+- Point cloud orientation
 - Stable visualization
 
-This experiment does not include perception algorithms.
+## Scope boundary
+
+This experiment only validates the sensor data visualization pipeline.
+It does not include ground segmentation or traversability algorithms.
+
+## Result location
+
+```
+results/EXP001_cloud_visualization/
+```
